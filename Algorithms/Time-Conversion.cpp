@@ -9,38 +9,38 @@ string timeConversion(string s) {
     int hr = stoi(k.erase(2));
     string ampm = s.substr(s.length()-2);
     
+    string ns;
+
     if(ampm == "PM"){
 
         if(hr < 12){
 
             hr += 12;
-            string ns = s.erase(s.length()-2);
+            ns = s.erase(s.length()-2);
             ns = ns.substr(2);
-            return to_string(hr) + ns;
+            ns = to_string(hr) + ns;
 
         }else{
 
-            string ns = s.erase(s.length()-2);
-            return ns;
+            ns = s.erase(s.length()-2);
 
         }
     }else{
 
         if(hr == 12){
-
-            string ns = s.erase(s.length()-2);
+            
+            ns = s.erase(s.length()-2);
             ns = ns.substr(2);
-            return "00" + ns;
+            ns = "00" + ns;
 
         }else{
 
-            string ns = s.erase(s.length()-2);
-            return ns;
+            ns = s.erase(s.length()-2);
 
         }
     }
 
-    return "a";
+    return ns;
 }
 
 /* ends here */
