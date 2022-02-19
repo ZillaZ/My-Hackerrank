@@ -5,6 +5,8 @@ using namespace std;
 string ltrim(const string &);
 string rtrim(const string &);
 
+/* My code below */
+
 void staircase(int n) {
     for(int i = n; i > 0; i--){
         for(int j = 0; j < n; j++){
@@ -20,6 +22,8 @@ void staircase(int n) {
         }
     }
 }
+
+/* ends here */
 
 int main()
 {
