@@ -11,12 +11,12 @@ vector<string> split(const string &);
 int diagonalDifference(vector<vector<int>> arr) {
     int l = 0; int r = 0;
     
-    for(int i = 0,j = 0; i < arr.size(); i++, j++){
+    for(int i = 0,j = 0, k = arr.size()-1, s = 0;
+        i < arr.size();
+        i++, j++, k--, s++){
+        
         l += arr.at(i).at(j);
-    }
-
-    for(int i = arr.size()-1, j = 0; i >= 0; i--, j++){
-        r += arr.at(i).at(j);
+        r += arr.at(k).at(s);
     }
     
     return abs(l - r);
